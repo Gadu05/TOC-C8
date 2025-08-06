@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tocc8ModelStoreContainer" CdmEntityContainer="tocc8Entities">
+    <EntitySetMapping Name="produto">
+      <EntityTypeMapping TypeName="tocc8Model.produto">
+        <MappingFragment StoreEntitySet="produto">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="datavalidade" ColumnName="datavalidade" />
+          <ScalarProperty Name="preco" ColumnName="preco" />
+          <ScalarProperty Name="taxalucro" ColumnName="taxalucro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
