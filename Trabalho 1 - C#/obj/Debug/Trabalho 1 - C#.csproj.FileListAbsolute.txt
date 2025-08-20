@@ -1,0 +1,82 @@
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\Trabalho 1 - C#.exe.config
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\Trabalho 1 - C#.exe
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\Trabalho 1 - C#.pdb
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\EntityFramework.dll
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\EntityFramework6.Npgsql.dll
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\Npgsql.dll
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Buffers.dll
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Memory.dll
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Text.Json.dll
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.ValueTuple.dll
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\EntityFramework.xml
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\EntityFramework6.Npgsql.xml
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\Npgsql.pdb
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\Npgsql.xml
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Buffers.xml
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Memory.xml
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Text.Json.xml
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\bin\Debug\System.ValueTuple.xml
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.csproj.AssemblyReference.cache
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.csproj.SuggestedBindingRedirects.cache
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.exe.config
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\obj\Debug\Trabalho_1___C_.Form1.resources
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\obj\Debug\Trabalho_1___C_.Properties.Resources.resources
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.csproj.GenerateResource.cache
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.csproj.CoreCompileInputs.cache
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\obj\Debug\Trabalho.180228E5.Up2Date
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.exe
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.pdb
+C:\Users\Monitor Informática\Documents\TOCC8\Trabalho 1 - C#\obj\Debug\Trabalho_1___C_.FormGraficoProduto.resources
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\Trabalho 1 - C#.exe.config
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\Trabalho 1 - C#.exe
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\Trabalho 1 - C#.pdb
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\EntityFramework.dll
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\EntityFramework6.Npgsql.dll
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\Npgsql.dll
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Buffers.dll
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Memory.dll
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Text.Json.dll
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.ValueTuple.dll
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\EntityFramework.xml
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\EntityFramework6.Npgsql.xml
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\Npgsql.pdb
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\Npgsql.xml
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Buffers.xml
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Memory.xml
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Text.Json.xml
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\bin\Debug\System.ValueTuple.xml
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.csproj.AssemblyReference.cache
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.csproj.SuggestedBindingRedirects.cache
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.exe.config
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\obj\Debug\Trabalho_1___C_.Form1.resources
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\obj\Debug\Trabalho_1___C_.FormGraficoProduto.resources
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\obj\Debug\Trabalho_1___C_.Properties.Resources.resources
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.csproj.GenerateResource.cache
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\obj\Debug\Trabalho.180228E5.Up2Date
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.exe
+C:\Users\Gabriel (Pessoal)\Documents\TOCC8\TOC-C8\Trabalho 1 - C#\obj\Debug\Trabalho 1 - C#.pdb
