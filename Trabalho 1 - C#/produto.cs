@@ -11,7 +11,8 @@ namespace Trabalho_1___C_
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Data.Entity;
+
     public partial class produto
     {
         public int codigo { get; set; }
@@ -20,6 +21,38 @@ namespace Trabalho_1___C_
         public Nullable<double> preco { get; set; }
         public Nullable<double> taxalucro { get; set; }
 
+        public double calcularPrecoFinal() {
+
+            try {
+
+                if (preco == null || taxalucro == null) {
+                    return 0;
+                }
+
+                return Convert.ToDouble(this.preco * (100 + this.taxalucro) / 100);
+            }
+            catch (Exception) {
+                throw;
+            }
+
+        }
+
+        public int? calcularPrazoValidade() {
+
+            try {
+
+                if (this.datavalidade == null) {
+                    return 0;
+                }
+
+                return DbFunctions.DiffDays(DateTime.Now, Convert.ToDateTime(this.datavalidade));
+
+            }
+            catch (Exception) {
+                throw;
+            }
+
+        }
 
 
     }

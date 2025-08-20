@@ -31,6 +31,8 @@ namespace Trabalho_1___C_ {
                 obj.preco = Convert.ToDouble(this.txtPrecoProduto.Text);
                 obj.taxalucro = Convert.ToDouble(this.txtTaxaLucroProduto.Text);
 
+                verficarDados(obj);
+
                 contexto = new TOCC8Entities();
                 contexto.produto.Add(obj);
                 contexto.SaveChanges();
@@ -59,9 +61,7 @@ namespace Trabalho_1___C_ {
                                 p.codigo,
                                 p.descricao,
                                 p.datavalidade,
-                                p.preco,
-                                p.taxalucro,
-                                precoFinal = p.preco + (p.preco * p.taxalucro / 100),
+                                precoFinal = p.preco * (100 + p.taxalucro) / 100,
                                 prazoValidade = DbFunctions.DiffDays(DateTime.Now, p.datavalidade)
                             };
 
@@ -131,6 +131,9 @@ namespace Trabalho_1___C_ {
                     obj.datavalidade = this.dtpDataValidadeProduto.Value;
                     obj.preco = Convert.ToDouble(this.txtPrecoProduto.Text);
                     obj.taxalucro = Convert.ToDouble(this.txtTaxaLucroProduto.Text);
+
+                    verficarDados(obj);
+
                     contexto.SaveChanges();
 
                 }
@@ -191,7 +194,7 @@ namespace Trabalho_1___C_ {
                                 p.codigo,
                                 p.descricao,
                                 p.datavalidade,
-                                precoFinal = p.preco + (p.preco * p.taxalucro / 100),
+                                precoFinal = p.preco * (100 + p.taxalucro) / 100,
                                 prazoValidade = DbFunctions.DiffDays(DateTime.Now, p.datavalidade)
                             };
 
@@ -244,14 +247,6 @@ namespace Trabalho_1___C_ {
             dgvProdutos.Columns["precoFinal"].HeaderText = "Preço Final (R$)";
             dgvProdutos.Columns["prazoValidade"].HeaderText = "Prazo de Validade (em dias)";
 
-            if (dgvProdutos.Columns["preco"] != null) {
-                dgvProdutos.Columns["preco"].HeaderText = "Preço (R$)";
-            }
-
-            if (dgvProdutos.Columns["taxalucro"] != null) {
-                dgvProdutos.Columns["taxalucro"].HeaderText = "Taxa de Lucro (%)";
-            }
-
         }
 
         private void btnGraficoProduto_Click(object sender, EventArgs e) {
@@ -264,6 +259,26 @@ namespace Trabalho_1___C_ {
             }
             catch (Exception ex) {
                 MessageBox.Show("Erro ao abrir gráfico: " + ex.Message);
+            }
+
+        }
+
+        private void verficarDados(produto produto) { 
+        
+            if (produto.descricao.Trim().Length == 0) {
+                throw new Exception("Descrição é obrigatória.");
+            }
+
+            if (produto.preco != null && produto.preco < 0) {
+                throw new Exception("Preço não pode ser negativo.");
+            }
+
+            if (produto.taxalucro != null && produto.taxalucro < 0) {
+                throw new Exception("Taxa de lucro não pode ser negativa.");
+            }
+
+            if (produto.datavalidade != null && produto.datavalidade < DateTime.Now) {
+                throw new Exception("Data de validade não pode ser menor que a data atual.");
             }
 
         }

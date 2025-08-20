@@ -54,6 +54,10 @@ namespace Trabalho_1___C_ {
                 graProdutos.Series[0].Points.Clear();
                 graProdutos.Series[1].Points.Clear();
 
+                graProdutos.Series[0].IsValueShownAsLabel = true;
+                graProdutos.Series[1].IsValueShownAsLabel = true;
+
+
 
                 foreach (var obj in lista) {
 
