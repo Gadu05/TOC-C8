@@ -1,7 +1,6 @@
 <?php
 $botao = strtolower(trim($_GET["b1"]));
 
-/*
 switch ($botao) {
     case 'gravar':
         header("Location: ..\\view\Gravar.php?txtNome=" . $_GET["txtNome"] . "&txtIdade=" . $_GET["txtIdade"]);
@@ -20,6 +19,4 @@ switch ($botao) {
         $_SESSION['idade'] = $_GET['txtIdade'];
         header("Location: ..\\view\Alterar.php");
         break;
-
-        
-}*/
+}

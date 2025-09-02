@@ -1,130 +1,84 @@
-<?php
-// --- Simulação de "banco de dados" em sessão ---
-session_start();
-if (!isset($_SESSION["produtos"])) {
-    $_SESSION["produtos"] = [];
-}
-
-// --- Adicionar produto ---
-if (isset($_POST["acao"]) && $_POST["acao"] === "adicionar") {
-    $_SESSION["produtos"][] = [
-        "id" => uniqid(),
-        "descricao" => $_POST["descricao"],
-        "preco" => (float) $_POST["preco"],
-        "qtde" => (int) $_POST["qtde"]
-    ];
-}
-
-// --- Remover produto ---
-if (isset($_GET["remover"])) {
-    $_SESSION["produtos"] = array_filter($_SESSION["produtos"], function ($p) {
-        return $p["id"] !== $_GET["remover"];
-    });
-}
-
-// --- Editar produto ---
-if (isset($_POST["acao"]) && $_POST["acao"] === "editar") {
-    foreach ($_SESSION["produtos"] as &$p) {
-        if ($p["id"] === $_POST["id"]) {
-            $p["descricao"] = $_POST["descricao"];
-            $p["preco"] = (float) $_POST["preco"];
-            $p["qtde"] = (int) $_POST["qtde"];
-        }
-    }
-    unset($p);
-}
-
-// --- Buscar produto para edição ---
-$produtoEditar = null;
-if (isset($_GET["editar"])) {
-    foreach ($_SESSION["produtos"] as $p) {
-        if ($p["id"] === $_GET["editar"]) {
-            $produtoEditar = $p;
-        }
-    }
-}
-?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CRUD PHP + Bootstrap</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Estoque</title>
+    <link rel="stylesheet" href="/TOC-C8/trabalho_2_php/view/public/css/style.css">
 </head>
 <body>
-
     <?php require_once __DIR__ . "/layout/header.php"; ?>
 
-    <div class="container py-5">
+    <div class="form-container">
 
-    <h1 class="mb-4">Mini CRUD de Produtos</h1>
+    <form action="../controller/Controlador.php" method="GET">
+        <h2>Estoque de Produtos</h2>
+        <label for="txtCodigo">Código:</label>
+        <input type="text" id="txtCodigo" name="txtCodigo" required><br><br>
 
-    <!-- Formulário -->
-    <div class="card mb-4">
-        <div class="card-body">
-            <form method="POST">
-                <input type="hidden" name="acao" value="<?= $produtoEditar ? 'editar' : 'adicionar' ?>">
-                <?php if ($produtoEditar): ?>
-                    <input type="hidden" name="id" value="<?= $produtoEditar['id'] ?>">
-                <?php endif; ?>
+        <label for="txtNome">Nome:</label>
+        <input type="text" id="txtNome" name="txtNome" required><br><br>
 
-                <div class="mb-3">
-                    <label class="form-label">Descrição</label>
-                    <input type="text" name="descricao" class="form-control" 
-                           value="<?= $produtoEditar['descricao'] ?? '' ?>" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Preço</label>
-                    <input type="number" step="0.01" name="preco" class="form-control" 
-                           value="<?= $produtoEditar['preco'] ?? '' ?>" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Quantidade</label>
-                    <input type="number" name="qtde" class="form-control" 
-                           value="<?= $produtoEditar['qtde'] ?? '' ?>" required>
-                </div>
+        <label for="txtDescricao">Descrição:</label>
+        <input type="text" id="txtDescricao" name="txtDescricao" required><br><br>
 
-                <button type="submit" class="btn btn-success">
-                    <?= $produtoEditar ? "Salvar Alterações" : "Adicionar Produto" ?>
-                </button>
-                <?php if ($produtoEditar): ?>
-                    <a href="crud.php" class="btn btn-secondary">Cancelar</a>
-                <?php endif; ?>
-            </form>
+        <label for="txtPreco">Preço:</label>
+        <input type="number" step="0.01" id="txtPreco" name="txtPreco" required><br><br>
+
+        <div class="button-group">
+        <button type="submit" name="btnFormProduto" value="gravar">Gravar</button>
+        <button type="submit" name="btnFormProduto" value="listar">Listar</button>
+        <button type="submit" name="btnFormProduto" value="remover">Remover</button>
+        <button type="submit" name="btnFormProduto" value="alterar">Alterar</button>
         </div>
-    </div>
-
-    <!-- Listagem -->
-    <table class="table table-striped table-bordered">
-        <thead class="table-dark">
-            <tr>
-                <th>Descrição</th>
-                <th>Preço (R$)</th>
-                <th>Qtd</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php if (empty($_SESSION["produtos"])): ?>
-                <tr><td colspan="4" class="text-center">Nenhum produto cadastrado</td></tr>
-            <?php else: ?>
-                <?php foreach ($_SESSION["produtos"] as $p): ?>
-                    <tr>
-                        <td><?= htmlspecialchars($p["descricao"]) ?></td>
-                        <td><?= number_format($p["preco"], 2, ",", ".") ?></td>
-                        <td><?= $p["qtde"] ?></td>
-                        <td>
-                            <a href="?editar=<?= $p['id'] ?>" class="btn btn-sm btn-primary">Editar</a>
-                            <a href="?remover=<?= $p['id'] ?>" class="btn btn-sm btn-danger"
-                               onclick="return confirm('Deseja remover este produto?')">Excluir</a>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            <?php endif; ?>
-        </tbody>
-    </table>
+    </form>
 
     </div>
 
+    <?php
+    require_once __DIR__ . "../../controller/ProdutoDAO.php";
+
+    $produtoDAO = new ProdutoDAO();
+    $produtos = $produtoDAO->listar();
+    echo ("Produtos retornados: " . print_r($produtos, true));
+
+    if (!empty($produtos)) {
+        echo '<div class="produto-list">';
+        echo '<h3>Lista de Produtos</h3>';
+        echo '<table>';
+        echo '<tr><th>Código</th><th>Nome</th><th>Descrição</th><th>Preço</th><th>Ações</th></tr>';
+        foreach ($produtos as $produto) {
+            echo '<tr>';
+            echo '<td>' . htmlspecialchars($produto['codigo']) . '</td>';
+            echo '<td>' . htmlspecialchars($produto['nome']) . '</td>';
+            echo '<td>' . htmlspecialchars($produto['descricao']) . '</td>';
+            echo '<td>' . htmlspecialchars(number_format($produto['preco'], 2)) . '</td>';
+            echo '<td>
+                <form method="GET" action="">
+                    <input type="hidden" name="editCodigo" value="' . htmlspecialchars($produto['codigo']) . '">
+                    <button type="submit" name="btnEditProduto" value="editar">Editar</button>
+                </form>
+            </td>';
+            echo '</tr>';
+        }
+        echo '</table>';
+        echo '</div>';
+    }
+
+    // Carregar dados do produto para edição
+    if (isset($_GET['btnEditProduto']) && $_GET['btnEditProduto'] === 'editar' && isset($_GET['editCodigo'])) {
+        $codigo = $_GET['editCodigo'];
+        $produto = $produtoDAO->buscarPorCodigo($codigo);
+        if ($produto) {
+            echo "<script>
+                document.getElementById('txtCodigo').value = '" . addslashes($produto['codigo']) . "';
+                document.getElementById('txtNome').value = '" . addslashes($produto['nome']) . "';
+                document.getElementById('txtDescricao').value = '" . addslashes($produto['descricao']) . "';
+                document.getElementById('txtPreco').value = '" . addslashes($produto['preco']) . "';
+            </script>";
+        }
+    }
+    ?>
+
+    <!-- Conteúdo dos produtos será adicionado aqui -->
 </body>
 </html>

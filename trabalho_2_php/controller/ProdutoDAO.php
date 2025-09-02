@@ -1,12 +1,11 @@
 <?php
-include("..\\model\\Banco.php");
-include("..\\model\\Produto.php");
 
-class ProdutoDAO
-{
+include("../model/Banco.php");
+include("../model/Produto.php");
 
-    public function gravar($obj)
-    {
+class ProdutoDAO {
+
+    public function gravar($obj) {
 
         $banco = new Banco();
         $query = "INSERT INTO produto(descricao, preco, qtde) VALUES ($1, $2, $3)";
@@ -23,8 +22,7 @@ class ProdutoDAO
 
     }
 
-    public function listar()
-    {
+    public function listar() {
 
         $banco = new Banco();
         $query = "SELECT * FROM produto ORDER BY descricao";
@@ -39,8 +37,29 @@ class ProdutoDAO
 
     }
 
-    public function remover($obj)
-    {
+    public function buscarPorCodigo($obj) {
+
+        $banco = new Banco();
+        $query = "SELECT * FROM produto WHERE codigo = $1";
+
+        $resultado = pg_query_params(
+            $banco->conexao,
+            $query,
+            [$obj->getCodigo()]
+        );
+
+        if (!$resultado) {
+            pg_close($banco->conexao);
+            return false;
+        }
+
+        $produto = pg_fetch_assoc($resultado);
+        pg_close($banco->conexao);
+        return $produto;
+
+    }
+
+    public function remover($obj) {
 
         $banco = new Banco();
         $query = "DELETE FROM produto WHERE codigo = $1";
@@ -57,8 +76,7 @@ class ProdutoDAO
 
     }
 
-    public function alterar($obj)
-    {
+    public function alterar($obj) {
 
         $banco = new Banco();
         $query = "UPDATE produto SET descricao = $1, preco = $2, qtde = $3 WHERE codigo = $4";
