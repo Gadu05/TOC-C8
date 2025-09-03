@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Estoque</title>
-    <link rel="stylesheet" href="/TOC-C8/trabalho_2_php/view/public/css/style.css">
+    <link rel="stylesheet" href="/trabalho_2_php/view/public/css/style.css">
 </head>
 <body>
     <?php require_once __DIR__ . "/layout/header.php"; ?>

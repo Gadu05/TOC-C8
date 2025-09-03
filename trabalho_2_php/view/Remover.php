@@ -24,7 +24,7 @@
         }
         ?>
 
-        <button onclick="window.location.href='/TOC-C8/trabalho_2_php/view/estoque.php'">Voltar</button>
+        <button onclick="window.location.href='/trabalho_2_php/view/estoque.php'">Voltar</button>
 
     </body>
 </html>    

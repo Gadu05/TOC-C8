@@ -11,6 +11,6 @@
     <?php require_once 'view/layout/header.php'; ?>
 
     <h1>Página Inicial</h1>
-    <p> paragrafo </p>
+    <p>  </p>
 </body>
 </html>
