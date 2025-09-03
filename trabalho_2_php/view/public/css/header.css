@@ -1,0 +1,33 @@
+
+.header-body {
+    margin: 5 5;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header a button {
+    background-color: darkslateblue;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+header a button:hover {
+    opacity: 0.8;
+    border-radius: 0;
+}
