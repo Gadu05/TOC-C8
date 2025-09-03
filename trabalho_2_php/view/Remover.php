@@ -6,11 +6,11 @@
     </head>
     <body>
         <?php
-        include("..\\..\\controller\\ProdutoDAO.php");
+        include("..\\controller\\ProdutoDAO.php");
         $dao = new ProdutoDAO();
         $obj = new Produto();
 
-        $obj->setCodigo($_GET['remover']);
+        $obj->setCodigo($_GET['txtCodigo']);
 
         echo $obj->getCodigo();
         
@@ -23,5 +23,8 @@
             echo "Nada foi removido."; 
         }
         ?>
+
+        <button onclick="window.location.href='/TOC-C8/trabalho_2_php/view/estoque.php'">Voltar</button>
+
     </body>
 </html>    

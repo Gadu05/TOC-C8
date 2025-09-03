@@ -28,4 +28,5 @@ header a button {
 
 header a button:hover {
     opacity: 0.8;
+    border-radius: 0;
 }

@@ -37,7 +37,7 @@ class ProdutoDAO {
 
     }
 
-    public function buscarPorCodigo($obj) {
+    public function buscarPorCodigo($codigo) {
 
         $banco = new Banco();
         $query = "SELECT * FROM produto WHERE codigo = $1";
@@ -45,7 +45,7 @@ class ProdutoDAO {
         $resultado = pg_query_params(
             $banco->conexao,
             $query,
-            [$obj->getCodigo()]
+            [$codigo]
         );
 
         if (!$resultado) {

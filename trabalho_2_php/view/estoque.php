@@ -8,53 +8,52 @@
 <body>
     <?php require_once __DIR__ . "/layout/header.php"; ?>
 
-    <div class="form-container">
+    <div>
 
     <form action="../controller/Controlador.php" method="GET">
         <h2>Estoque de Produtos</h2>
         <label for="txtCodigo">Código:</label>
-        <input type="text" id="txtCodigo" name="txtCodigo" required><br><br>
-
-        <label for="txtNome">Nome:</label>
-        <input type="text" id="txtNome" name="txtNome" required><br><br>
+        <input type="text" id="txtCodigo" name="txtCodigo"><br>
 
         <label for="txtDescricao">Descrição:</label>
-        <input type="text" id="txtDescricao" name="txtDescricao" required><br><br>
+        <input type="text" id="txtDescricao" name="txtDescricao" required><br>
 
         <label for="txtPreco">Preço:</label>
-        <input type="number" step="0.01" id="txtPreco" name="txtPreco" required><br><br>
+        <input type="number" step="0.01" id="txtPreco" name="txtPreco" required><br>
+
+        <label for="txtQuantidade">Quantidade:</label>
+        <input type="number" id="txtQuantidade" name="txtQuantidade" required><br>
 
         <div class="button-group">
         <button type="submit" name="btnFormProduto" value="gravar">Gravar</button>
-        <button type="submit" name="btnFormProduto" value="listar">Listar</button>
-        <button type="submit" name="btnFormProduto" value="remover">Remover</button>
+        <!-- <button type="submit" name="btnFormProduto" value="listar">Listar</button> -->
         <button type="submit" name="btnFormProduto" value="alterar">Alterar</button>
+        <button type="submit" name="btnFormProduto" value="remover">Remover</button>
         </div>
     </form>
 
     </div>
 
     <?php
-    require_once __DIR__ . "../../controller/ProdutoDAO.php";
+    include("../controller/ProdutoDAO.php");
 
-    $produtoDAO = new ProdutoDAO();
-    $produtos = $produtoDAO->listar();
-    echo ("Produtos retornados: " . print_r($produtos, true));
+    $dao = new ProdutoDAO();
+    $tabela = $dao->listar();
 
-    if (!empty($produtos)) {
+    if ($tabela) {
         echo '<div class="produto-list">';
         echo '<h3>Lista de Produtos</h3>';
         echo '<table>';
-        echo '<tr><th>Código</th><th>Nome</th><th>Descrição</th><th>Preço</th><th>Ações</th></tr>';
-        foreach ($produtos as $produto) {
+        echo '<tr><th>Código</th><th>Descrição</th><th>Preço</th><th>Quantidade</th><th>Ações</th></tr>';
+        while ($linha = pg_fetch_array($tabela)) {
             echo '<tr>';
-            echo '<td>' . htmlspecialchars($produto['codigo']) . '</td>';
-            echo '<td>' . htmlspecialchars($produto['nome']) . '</td>';
-            echo '<td>' . htmlspecialchars($produto['descricao']) . '</td>';
-            echo '<td>' . htmlspecialchars(number_format($produto['preco'], 2)) . '</td>';
+            echo '<td>' . $linha[0] . '</td>';
+            echo '<td>' . $linha[1] . '</td>';
+            echo '<td>' . $linha[2] . '</td>';
+            echo '<td>' . $linha[3] . '</td>';
             echo '<td>
                 <form method="GET" action="">
-                    <input type="hidden" name="editCodigo" value="' . htmlspecialchars($produto['codigo']) . '">
+                    <input type="hidden" name="editCodigo" value="' . $linha[0] . '">
                     <button type="submit" name="btnEditProduto" value="editar">Editar</button>
                 </form>
             </td>';
@@ -64,21 +63,19 @@
         echo '</div>';
     }
 
-    // Carregar dados do produto para edição
     if (isset($_GET['btnEditProduto']) && $_GET['btnEditProduto'] === 'editar' && isset($_GET['editCodigo'])) {
         $codigo = $_GET['editCodigo'];
-        $produto = $produtoDAO->buscarPorCodigo($codigo);
+        $produto = $dao->buscarPorCodigo($codigo);
         if ($produto) {
             echo "<script>
                 document.getElementById('txtCodigo').value = '" . addslashes($produto['codigo']) . "';
-                document.getElementById('txtNome').value = '" . addslashes($produto['nome']) . "';
                 document.getElementById('txtDescricao').value = '" . addslashes($produto['descricao']) . "';
                 document.getElementById('txtPreco').value = '" . addslashes($produto['preco']) . "';
+                document.getElementById('txtQuantidade').value = '" . addslashes($produto['qtde']) . "';
             </script>";
         }
     }
     ?>
 
-    <!-- Conteúdo dos produtos será adicionado aqui -->
 </body>
 </html>

@@ -7,26 +7,62 @@
 <body>
     <?php require_once __DIR__ . "/layout/header.php"; ?>
 
-    <form action="../controller/Controlador.php" method="GET">
-        <h2>Produtos</h2>
-        <label for="txtCodigo">Código:</label>
-        <input type="text" id="txtCodigo" name="txtCodigo" required><br><br>
+    <?php
+    include("../controller/ProdutoDAO.php");
 
-        <label for="txtNome">Nome:</label>
-        <input type="text" id="txtNome" name="txtNome" required><br><br>
+    session_start();
 
-        <label for="txtDescricao">Descrição:</label>
-        <input type="text" id="txtDescricao" name="txtDescricao" required><br><br>
+    $dao = new ProdutoDAO();
+    $tabela = $dao->listar();
 
-        <label for="txtPreco">Preço:</label>
-        <input type="number" step="0.01" id="txtPreco" name="txtPreco" required><br><br>
+    if ($tabela) {
+        echo '<h3>Lista de Produtos</h3>';
+        echo '<div class="produto-list" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 30px;">';
+        while ($linha = pg_fetch_array($tabela)) {
+            echo '<div style="border: 1px solid #ccc; padding: 15px; border-radius: 8px;">';
+            echo '<strong>Descrição:</strong> ' . $linha[1] . '<br>';
+            echo '<strong>Preço:</strong> R$ ' . $linha[2] . '<br>';
+            $quantidadeNoCarrinho = isset($_SESSION['carrinho'][$linha[0]]) ? $_SESSION['carrinho'][$linha[0]] : 0;
+            $quantidadeDisponivel = $linha[3] - $quantidadeNoCarrinho;
+            echo '<strong>Quantidade em estoque:</strong> ' . $quantidadeDisponivel . '<br>';
+            echo '<form method="GET" action="">
+                    <input type="hidden" name="codigoProduto" value="' . $linha[0] . '">
+                    <input type="number" name="quantidadeCarrinho" value="1" min="1" max="' . $quantidadeDisponivel . '" required>
+                    <button type="submit" name="btnAdicionarCarrinho" value="add">Adicionar ao Carrinho</button>
+                </form>';
+            echo '</div>';
+        }
+        echo '</div>';
+    }
+    
 
-        <button type="submit" name="btnFormProduto" value="gravar">Gravar</button>
-        <button type="submit" name="btnFormProduto" value="listar">Listar</button>
-        <button type="submit" name="btnFormProduto" value="remover">Remover</button>
-        <button type="submit" name="btnFormProduto" value="alterar">Alterar</button>
-    </form>
+    if (isset($_GET['btnAdicionarCarrinho']) && isset($_GET['codigoProduto']) && isset($_GET['quantidadeCarrinho'])) {
+        $codigoProduto = $_GET['codigoProduto'];
+        $quantidadeAdicionar = intval($_GET['quantidadeCarrinho']);
 
-    <!-- Conteúdo dos produtos será adicionado aqui -->
+        $produtoAtual = $dao->buscarPorCodigo($codigoProduto);
+
+        if ($produtoAtual) {
+            $estoque = intval($produtoAtual["qtde"]);
+
+            if (!isset($_SESSION['carrinho'])) {
+                $_SESSION['carrinho'] = [];
+            }
+
+            $quantidadeNoCarrinho = isset($_SESSION['carrinho'][$codigoProduto]) ? $_SESSION['carrinho'][$codigoProduto] : 0;
+            $novaQuantidade = $quantidadeNoCarrinho + $quantidadeAdicionar;
+
+            if ($novaQuantidade <= $estoque) {
+                $_SESSION['carrinho'][$codigoProduto] = $novaQuantidade;
+                echo '<div style="color:green;">Produto adicionado ao carrinho!</div>';
+                header("Location: " . $_SERVER['PHP_SELF']);
+            } else {
+                echo '<div style="color:red;">Quantidade excede o estoque disponível!</div>';
+            }
+        }
+    }
+    
+    ?>
+
 </body>
 </html>

@@ -8,13 +8,13 @@
 
 <body>
     <?php
-    include("..\\..\\controller\\ProdutoDAO.php");
+    include("..\\controller\\ProdutoDAO.php");
     $dao = new ProdutoDAO();
     $obj = new Produto();
 
     $obj->setDescricao($_GET['txtDescricao']);
     $obj->setPreco($_GET['txtPreco']);
-    $obj->setQtde($_GET['txtQtde']);
+    $obj->setQtde($_GET['txtQuantidade']);
     $r = $dao->gravar($obj);
 
     if ($r > 0) {
@@ -23,6 +23,9 @@
         echo "Nada foi salvo.";
     }
     ?>
+
+    <button onclick="window.location.href='/TOC-C8/trabalho_2_php/view/estoque.php'">Voltar</button>
+
 </body>
 
 </html>

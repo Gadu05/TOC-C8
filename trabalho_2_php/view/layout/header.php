@@ -11,11 +11,11 @@
                 <a href="/TOC-C8/trabalho_2_php">
                     <button type="button">Início</button>
                 </a>
-                <a href="/TOC-C8/trabalho_2_php/view/estoque.php">
-                    <button type="button">Gerenciar Estoque</button>
-                </a>
                 <a href="/TOC-C8/trabalho_2_php/view/produtos.php">
                     <button type="button">Produtos</button>
+                </a>
+                <a href="/TOC-C8/trabalho_2_php/view/estoque.php">
+                    <button type="button">Gerenciar Estoque</button>
                 </a>
                 <a href="/TOC-C8/trabalho_2_php/view/carrinho.php">
                     <button type="button">Carrinho</button>
