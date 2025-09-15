@@ -1,26 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\",
+  "WorkspaceRootPath": "C:\\Users\\Monitor Inform\u00E1tica\\Documents\\TOCC8\\Trabalho 1 - C#\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6CE229C0-348C-4241-BBC3-C7298A887AA5}|Trabalho 1 - C#.csproj|c:\\users\\gabriel (pessoal)\\documents\\tocc8\\toc-c8\\trabalho 1 - c#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CE229C0-348C-4241-BBC3-C7298A887AA5}|Trabalho 1 - C#.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Monitor Inform\u00E1tica\\Documents\\TOCC8\\Trabalho 1 - C#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CE229C0-348C-4241-BBC3-C7298A887AA5}|Trabalho 1 - C#.csproj|C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\formgraficoproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CE229C0-348C-4241-BBC3-C7298A887AA5}|Trabalho 1 - C#.csproj|solutionrelative:formgraficoproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Monitor Inform\u00E1tica\\Documents\\TOCC8\\Trabalho 1 - C#\\formgraficoproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:formgraficoproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CE229C0-348C-4241-BBC3-C7298A887AA5}|Trabalho 1 - C#.csproj|C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6CE229C0-348C-4241-BBC3-C7298A887AA5}|Trabalho 1 - C#.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Monitor Inform\u00E1tica\\Documents\\TOCC8\\Trabalho 1 - C#\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CE229C0-348C-4241-BBC3-C7298A887AA5}|Trabalho 1 - C#.csproj|c:\\users\\gabriel (pessoal)\\documents\\tocc8\\toc-c8\\trabalho 1 - c#\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CE229C0-348C-4241-BBC3-C7298A887AA5}|Trabalho 1 - C#.csproj|solutionrelative:produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CE229C0-348C-4241-BBC3-C7298A887AA5}|Trabalho 1 - C#.csproj|C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\formgraficoproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6CE229C0-348C-4241-BBC3-C7298A887AA5}|Trabalho 1 - C#.csproj|solutionrelative:formgraficoproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Monitor Inform\u00E1tica\\Documents\\TOCC8\\Trabalho 1 - C#\\FormGraficoProduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FormGraficoProduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,36 +31,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "produto.cs",
-              "DocumentMoniker": "C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\produto.cs",
-              "RelativeDocumentMoniker": "produto.cs",
-              "ToolTip": "C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\produto.cs",
-              "RelativeToolTip": "produto.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA9wC8AAABgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T12:34:10.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "FormGraficoProduto.cs",
-              "DocumentMoniker": "C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\FormGraficoProduto.cs",
+              "DocumentMoniker": "C:\\Users\\Monitor Inform\u00E1tica\\Documents\\TOCC8\\Trabalho 1 - C#\\FormGraficoProduto.cs",
               "RelativeDocumentMoniker": "FormGraficoProduto.cs",
-              "ToolTip": "C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\FormGraficoProduto.cs",
+              "ToolTip": "C:\\Users\\Monitor Inform\u00E1tica\\Documents\\TOCC8\\Trabalho 1 - C#\\FormGraficoProduto.cs",
               "RelativeToolTip": "FormGraficoProduto.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAqwDkAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAowDkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-06T19:42:39.305Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "FormGraficoProduto.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\FormGraficoProduto.cs",
+              "DocumentMoniker": "C:\\Users\\Monitor Inform\u00E1tica\\Documents\\TOCC8\\Trabalho 1 - C#\\FormGraficoProduto.cs",
               "RelativeDocumentMoniker": "FormGraficoProduto.cs",
-              "ToolTip": "C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\FormGraficoProduto.cs [Design]",
+              "ToolTip": "C:\\Users\\Monitor Inform\u00E1tica\\Documents\\TOCC8\\Trabalho 1 - C#\\FormGraficoProduto.cs [Design]",
               "RelativeToolTip": "FormGraficoProduto.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-06T19:40:45.338Z",
@@ -72,24 +55,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Monitor Inform\u00E1tica\\Documents\\TOCC8\\Trabalho 1 - C#\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\Form1.cs",
+              "ToolTip": "C:\\Users\\Monitor Inform\u00E1tica\\Documents\\TOCC8\\Trabalho 1 - C#\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAAAIwMQAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-06T18:37:47.605Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Monitor Inform\u00E1tica\\Documents\\TOCC8\\Trabalho 1 - C#\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Gabriel (Pessoal)\\Documents\\TOCC8\\TOC-C8\\Trabalho 1 - C#\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\Monitor Inform\u00E1tica\\Documents\\TOCC8\\Trabalho 1 - C#\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-06T18:31:47.369Z",

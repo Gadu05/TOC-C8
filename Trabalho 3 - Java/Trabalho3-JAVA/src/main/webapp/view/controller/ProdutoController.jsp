@@ -1,7 +1,7 @@
 <%-- 
     Document   : ProdutoController
     Created on : 15 de set. de 2025, 15:39:40
-    Author     : Monitor Informática
+    Author     : Gabriel Eduardo
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

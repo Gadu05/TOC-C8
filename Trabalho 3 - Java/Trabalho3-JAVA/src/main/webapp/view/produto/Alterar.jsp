@@ -1,7 +1,7 @@
 <%-- 
     Document   : Alterar.jsp
     Created on : 15 de set. de 2025, 15:12:34
-    Author     : Monitor Informática
+    Author     : Gabriel Eduardo
 --%>
 
 <%@page import="com.gabrieleduardo.trabalho3.java.resources.controller.DAOJPA"%>

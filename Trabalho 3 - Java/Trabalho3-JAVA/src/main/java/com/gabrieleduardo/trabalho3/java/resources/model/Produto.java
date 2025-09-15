@@ -19,7 +19,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Monitor Informática
+ * @author Gabriel Eduardo
  */
 @Entity
 @Table(name = "produto")
