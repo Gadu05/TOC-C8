@@ -25,7 +25,7 @@
             <h2 class="text-light">Operações REST</h2>
             <form id="produto-form" class="row g-3 form-floating">
                 <div class="col-md-3 form-floating">
-                    <input type="number" class="form-control" id="codigo" placeholder="Código" required>
+                    <input type="number" class="form-control" id="codigo" placeholder="Código">
                     <label for="codigo">Código</label>
                 </div>
                 <div class="col-md-3 form-floating">
@@ -33,11 +33,11 @@
                     <label for="descricao">Descrição</label>
                 </div>
                 <div class="col-md-3 form-floating">
-                    <input type="number" step="0.01" class="form-control" id="preco" placeholder="Preço" required>
+                    <input type="number" step="0.01" class="form-control" id="preco" placeholder="Preço" min="0" required>
                     <label for="preco">Preço</label>
                 </div>
                 <div class="col-md-3 form-floating">
-                    <input type="number" class="form-control" id="qtde" placeholder="Quantidade" required>
+                    <input type="number" class="form-control" id="qtde" placeholder="Quantidade" min="1" required>
                     <label for="qtde">Quantidade</label>
                 </div>
                 <div class="col-12 d-flex gap-2">
