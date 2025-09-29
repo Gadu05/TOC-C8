@@ -1,7 +1,6 @@
 
 import { Router } from "express";
 import ProdutoDAO from "../src/controller/ProdutoDAO.js";
-import Produto from "../src/model/Produto.js";
 
 const router = Router();
 const dao = new ProdutoDAO();
@@ -13,8 +12,6 @@ router.post("/produtos", async (req, res) => {
     if (!descricao || preco == null || qtde == null) {
         return res.status(400).send(HttpCat(400));
     }
-
-    console.log(descricao, preco, qtde);
 
     try {
         const resultado = await dao.gravar({ descricao, preco, qtde });
