@@ -9,12 +9,18 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script>
+
+        // CONSTANTES API
+        const api_url = 'http://192.168.124.153:3000';
+        const api_produtos = api_url + '/produtos';
+
         function preencherFormulario(codigo, descricao, preco, qtde) {
             $('#codigo').val(codigo);
             $('#descricao').val(descricao);
             $('#preco').val(preco);
             $('#qtde').val(qtde);
         }
+
     </script>
 
 </head>
@@ -41,7 +47,7 @@
                     <label for="qtde">Quantidade</label>
                 </div>
                 <div class="col-12 d-flex gap-2">
-                    <button type="submit" class="btn btn-success">
+                    <button type="submit" class="btn btn-success" id="add-produto-btn">
                         <i class="bi bi-plus-circle"></i> Adicionar
                     </button>
                     <button type="button" class="btn btn-warning" id="atualizar-btn">
@@ -59,10 +65,11 @@
             </div>
 
             <script>
-                $('#add-produto-form').on('submit', function(e) {
+
+                $('#produto-form').on('submit', function(e) {
                 e.preventDefault();
                 $.ajax({
-                    url: 'http://localhost:3000/produtos',
+                    url: api_produtos,
                     method: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({
@@ -78,7 +85,7 @@
 
                 $('#atualizar-btn').on('click', function() {
                 $.ajax({
-                    url: 'http://localhost:3000/produtos',
+                    url: api_produtos,
                     method: 'PUT',
                     contentType: 'application/json',
                     data: JSON.stringify({
@@ -93,17 +100,23 @@
                 });
 
                 $('#remover-btn').on('click', function() {
-                $.ajax({
-                    url: 'http://localhost:3000/produtos/',
-                    method: 'DELETE',
-                    contentType: 'application/json',
-                    data: JSON.stringify({
-                        codigo: $('#codigo').val()
-                    }),
-                    success: function() { location.reload(); },
-                    error: function() { alert('Erro ao remover produto.'); }
+
+                    if (!confirm('Confirma a remoção do produto de código ' + $('#codigo').val() + '?')) {
+                        return;
+                    }
+
+                    $.ajax({
+                        url: api_produtos,
+                        method: 'DELETE',
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                            codigo: $('#codigo').val()
+                        }),
+                        success: function() { location.reload(); },
+                        error: function() { alert('Erro ao remover produto.'); }
+                    });
                 });
-                });
+
             </script>
 
         </div>
@@ -132,7 +145,7 @@
     <script>
         $(document).ready(function() {
             $.ajax({
-                url: 'http://localhost:3000/produtos',
+                url: api_produtos,
                 method: 'GET',
                 dataType: 'json',
                 success: function(res) {

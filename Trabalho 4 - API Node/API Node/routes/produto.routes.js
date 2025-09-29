@@ -14,9 +14,11 @@ router.post("/produtos", async (req, res) => {
         return res.status(400).send(HttpCat(400));
     }
 
+    console.log(descricao, preco, qtde);
+
     try {
         const resultado = await dao.gravar({ descricao, preco, qtde });
-        return res.status(201).json({ message: "Produto criado com sucesso", codigo: resultado, status: 201 });
+        return res.status(201).json({ message: "Produto criado com sucesso", codigo: resultado });
     }
     catch (erro) {
         return res.status(500).send(HttpCat(500));
@@ -28,7 +30,7 @@ router.get("/produtos", async (req, res) => {
 
     try {
         const produtos = await dao.listar();
-        return res.status(200).json({produtos, status: 200});
+        return res.status(200).json(produtos);
     }
     catch (erro) {
         return res.status(500).send(HttpCat(500));
@@ -46,7 +48,7 @@ router.put("/produtos", async (req, res) => {
 
     try {
         const resultado = await dao.alterar({ codigo, descricao, preco, qtde });
-        return res.status(200).json({ message: "Produto alterado com sucesso", linhasAfetadas: resultado, status: 200 });
+        return res.status(200).json({ message: "Produto alterado com sucesso", linhasAfetadas: resultado });
     }
     catch (erro) {
         return res.status(500).send(HttpCat(500));
@@ -64,7 +66,7 @@ router.delete("/produtos", async (req, res) => {
 
     try {
         const resultado = await dao.excluir(codigo);
-        return res.status(200).json({ message: "Produto excluído com sucesso", linhasAfetadas: resultado, status: 200 });
+        return res.status(200).json({ message: "Produto excluído com sucesso", linhasAfetadas: resultado });
     }
     catch (erro) {
         return res.status(500).send(HttpCat(500));
