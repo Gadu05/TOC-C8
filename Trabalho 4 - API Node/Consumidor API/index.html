@@ -9,12 +9,18 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script>
+
+        const url = "http://10.114.65.13:3000";
+        const produto_api = url + "/produtos"
+
         function preencherFormulario(codigo, descricao, preco, qtde) {
             $('#codigo').val(codigo);
             $('#descricao').val(descricao);
             $('#preco').val(preco);
             $('#qtde').val(qtde);
         }
+
+
     </script>
 
 </head>
@@ -59,10 +65,10 @@
             </div>
 
             <script>
-                $('#add-produto-form').on('submit', function(e) {
+                $('#produto-form').on('submit', function(e) {
                 e.preventDefault();
                 $.ajax({
-                    url: 'http://localhost:3000/produtos',
+                    url: produto_api,
                     method: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({
@@ -78,7 +84,7 @@
 
                 $('#atualizar-btn').on('click', function() {
                 $.ajax({
-                    url: 'http://localhost:3000/produtos',
+                    url: produto_api,
                     method: 'PUT',
                     contentType: 'application/json',
                     data: JSON.stringify({
@@ -94,7 +100,7 @@
 
                 $('#remover-btn').on('click', function() {
                 $.ajax({
-                    url: 'http://localhost:3000/produtos/',
+                    url: produto_api,
                     method: 'DELETE',
                     contentType: 'application/json',
                     data: JSON.stringify({
@@ -132,7 +138,7 @@
     <script>
         $(document).ready(function() {
             $.ajax({
-                url: 'http://localhost:3000/produtos',
+                url: produto_api,
                 method: 'GET',
                 dataType: 'json',
                 success: function(res) {
