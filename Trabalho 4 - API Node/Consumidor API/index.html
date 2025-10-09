@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Consumidor de API - Produtos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+        const url = "http://10.114.65.13:3000";
+        const produto_api = url + "/produtos"
+
+        function preencherFormulario(codigo, descricao, preco, qtde) {
+            $('#codigo').val(codigo);
+            $('#descricao').val(descricao);
+            $('#preco').val(preco);
+            $('#qtde').val(qtde);
+        }
+
+    </script>
+
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mt-4 mb-4">
+        <div class="form-section">
+            <h2 class="text-light">Operações REST</h2>
+            <form id="produto-form" class="row g-3 form-floating">
+                <div class="col-md-3 form-floating">
+                    <input type="number" class="form-control" id="codigo" placeholder="Código">
+                    <label for="codigo">Código</label>
+                </div>
+                <div class="col-md-3 form-floating">
+                    <input type="text" class="form-control" id="descricao" placeholder="Descrição" required>
+                    <label for="descricao">Descrição</label>
+                </div>
+                <div class="col-md-3 form-floating">
+                    <input type="number" step="0.01" class="form-control" id="preco" placeholder="Preço" min="0" required>
+                    <label for="preco">Preço</label>
+                </div>
+                <div class="col-md-3 form-floating">
+                    <input type="number" class="form-control" id="qtde" placeholder="Quantidade" min="1" required>
+                    <label for="qtde">Quantidade</label>
+                </div>
+                <div class="col-12 d-flex gap-2">
+                    <button type="submit" class="btn btn-success" id="add-produto-btn">
+                        <i class="bi bi-plus-circle"></i> Adicionar
+                    </button>
+                    <button type="button" class="btn btn-warning" id="atualizar-btn">
+                        <i class="bi bi-pencil-square"></i> Atualizar
+                    </button>
+                    <button type="button" class="btn btn-danger" id="remover-btn">
+                        <i class="bi bi-trash"></i> Remover
+                    </button>
+                    <button type="reset" class="btn btn-secondary">
+                        <i class="bi bi-x-circle"></i> Limpar
+                    </button>
+                </div>
+                
+                </form>
+            </div>
+
+            <script>
+                $('#produto-form').on('submit', function(e) {
+                e.preventDefault();
+                $.ajax({
+                    url: produto_api,
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                    codigo: $('#codigo').val(),
+                    descricao: $('#descricao').val(),
+                    preco: parseFloat($('#preco').val()),
+                    qtde: parseInt($('#qtde').val())
+                    }),
+                    success: function() { location.reload(); },
+                    error: function() { alert('Erro ao adicionar produto.'); }
+                });
+                });
+
+                $('#atualizar-btn').on('click', function() {
+                $.ajax({
+                    url: produto_api,
+                    method: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                    codigo: $('#codigo').val(),
+                    descricao: $('#descricao').val(),
+                    preco: parseFloat($('#preco').val()),
+                    qtde: parseInt($('#qtde').val())
+                    }),
+                    success: function() { location.reload(); },
+                    error: function() { alert('Erro ao atualizar produto.'); }
+                });
+                });
+
+                $('#remover-btn').on('click', function() {
+                $.ajax({
+                    url: produto_api,
+                    method: 'DELETE',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        codigo: $('#codigo').val()
+                    }),
+                    success: function() { location.reload(); },
+                    error: function() { alert('Erro ao remover produto.'); }
+                });
+                });
+
+            </script>
+
+        </div>
+
+        <h1 class="mt-4 mb-4 text-light">Lista de Produtos</h1>
+        <div class="table-responsive">
+            <table id="produtos-table" class="table table-dark table-striped table-bordered align-middle">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: produto_api,
+                method: 'GET',
+                dataType: 'json',
+                success: function(res) {
+                    var produtos = res.produtos || res;
+                    var tbody = $('#produtos-table tbody');
+                    tbody.empty();
+                    produtos.forEach(function(produto) {
+                        var row = `<tr>
+                            <td>${produto.codigo}</td>
+                            <td>${produto.descricao}</td>
+                            <td>R$ ${produto.preco}</td>
+                            <td>${produto.qtde}</td>
+                            <td>
+                                <button class="btn btn-info btn-sm" onclick="preencherFormulario('${produto.codigo}', '${produto.descricao}', '${produto.preco}', '${produto.qtde}')">
+                                    <i class="bi bi-pencil"></i> Editar
+                                </button>
+                            </td>
+                        </tr>`;
+                        tbody.append(row);
+                    });
+                },
+                error: function() {
+                    alert('Erro ao carregar produtos da API.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
