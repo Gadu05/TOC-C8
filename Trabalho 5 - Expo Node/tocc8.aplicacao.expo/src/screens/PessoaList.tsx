@@ -14,7 +14,7 @@ export default function PessoaList() {
     useEffect(() => {
         async function fetchPessoas() {
             try {
-                const data = await listar();
+                const data : PessoaDTO[] = await listar();
                 setPessoas(data);
             } catch (error) {
                 console.error('Erro ao carregar pessoas', error);
@@ -24,6 +24,10 @@ export default function PessoaList() {
     }, []);
 
     return (
+        <View>
+        <View>
+            <Text style={styles.title}>Tela nao vazia</Text>
+        </View>
         <View style={styles.container}>
             <Text style={styles.title}>Lista de Pessoas</Text>
             <FlatList
@@ -37,6 +41,7 @@ export default function PessoaList() {
                 )}
             />
         </View>
+    </View>
     );
 }
 
